@@ -2,7 +2,7 @@ import './index.html';
 import './style.css';
 
 console.log('funguju!');
-
+//navbar desktop
 document
   .getElementsByClassName('btn-home')[0]
   .addEventListener('click', function () {
@@ -23,3 +23,16 @@ document
   .addEventListener('click', function () {
     window.scrollTo(0, document.querySelector('.contacts').offsetTop);
   });
+// navbar mobile
+const nav = document.querySelector('.nav-closed');
+const navLinks = document.querySelectorAll('.nav a');
+const navLink = document.querySelector('.nav a');
+const navBtn = document.querySelector('#nav-btn');
+
+const NavBtnElm = (event) => {
+  nav.classList.toggle('nav-closed');
+};
+navBtn.addEventListener('click', NavBtnElm);
+navLinks.forEach((navLink) => {
+  navLink.addEventListener('click', NavBtnElm);
+});
