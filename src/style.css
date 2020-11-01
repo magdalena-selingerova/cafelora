@@ -97,18 +97,24 @@ nav a:hover {
 .nav-closed {
   display: none;
 }
-
 .nav-btn {
-  width: 3rem;
-  height: 3rem;
-  padding: 0;
-  border: none;
+  display: none;
+}
 
-  background-color: transparent;
-  background-image: url('./img/menu.png');
-  background-size: contain;
+@media only screen and (max-width: 768px) {
+  .nav-btn {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    padding: 0;
+    border: none;
 
-  cursor: pointer;
+    background-color: transparent;
+    background-image: url('./img/menu.png');
+    background-size: contain;
+
+    cursor: pointer;
+  }
 }
 
 .nav-btn:focus {
